@@ -7,10 +7,6 @@ return [
     'zf-content-negotiation' => [
         'selectors' => [
             'HalJsonYAML' => [
-                JsonModel::class => [
-                    'application/json',
-                    'application/*+json',
-                ],
                 YamlModel::class => [
                     'text/yaml',
                     'text/x-yaml',
@@ -18,6 +14,10 @@ return [
                     'application/x-yaml',
                     'text/vnd.yaml',
                     'application/vnd.yaml',
+                ],
+                JsonModel::class => [
+                    'application/json',
+                    'application/*+json',
                 ],
             ],
         ],
